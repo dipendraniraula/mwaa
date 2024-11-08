@@ -1,6 +1,6 @@
 name: sales-i-demo
 description: ''
-version: 0.0.1
+version: '1'
 author: dipendranp@gmail.com
 language: python
 buildSystem: ''
