@@ -4,9 +4,11 @@ from pyspark.sql.types import *
 from testmwaa.config.ConfigStore import *
 from testmwaa.functions import *
 from prophecy.utils import *
+from testmwaa.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_datasource1 = datasource1(spark)
+    target1(spark)
 
 def main():
     spark = SparkSession.builder\

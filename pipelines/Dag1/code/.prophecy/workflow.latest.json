@@ -79,10 +79,10 @@
       "id" : "hE2TVXfFtnGFtVuU-LkBi$$xjaSJ2BxWn3ly6lrUQaIv",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
-        "x" : 0,
-        "y" : 80,
+        "label" : "datasource1",
+        "slug" : "datasource1",
+        "x" : -600,
+        "y" : -200,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -98,7 +98,9 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "datasets/datasource1"
+      }
     }
   },
   "ports" : {
@@ -109,7 +111,7 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.hE2TVXfFtnGFtVuU-LkBi$$xjaSJ2BxWn3ly6lrUQaIv.properties.datasetId",
+    "property" : "$.workflow.processes.hE2TVXfFtnGFtVuU-LkBi$$xjaSJ2BxWn3ly6lrUQaIv.properties.dataset.schema",
     "range" : {
       "start" : {
         "line" : 0,
@@ -120,8 +122,8 @@
         "character" : 0
       }
     },
-    "severity" : 1,
-    "message" : "dataset id missing",
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]

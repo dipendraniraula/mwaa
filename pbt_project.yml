@@ -20,8 +20,10 @@ pipelines:
     language: python
     createdAt: '2024-11-08 01:06:25'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/datasource1
+      outputs:
+      - datasets/target1
     subgraphs: []
     dependencies: {}
   pipelines/Dag1:
@@ -33,11 +35,38 @@ pipelines:
     language: python
     createdAt: '2024-11-08 17:29:26'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/datasource1
       outputs: []
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/datasource1:
+    name: datasource1
+    description: ''
+    author: dipendranp@gmail.com
+    createdAt: '2024-11-08 17:48:06'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 18917
+        datasetType: File
+        description: ''
+        author: dipendranp@gmail.com
+        createdAt: '2024-11-08 17:48:06'
+  datasets/target1:
+    name: target1
+    description: ''
+    author: dipendranp@gmail.com
+    createdAt: '2024-11-08 18:12:05'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 18917
+        datasetType: File
+        description: ''
+        author: dipendranp@gmail.com
+        createdAt: '2024-11-08 18:12:05'
 templates: {}
 jobs: {}
 gemContainer:

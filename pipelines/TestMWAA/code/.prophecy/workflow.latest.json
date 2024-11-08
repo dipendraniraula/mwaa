@@ -74,12 +74,102 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ ],
-  "processes" : { },
+  "processes" : {
+    "NnDFP0EVqcjMExMhhwkq2$$ydb3S5idCm6Cjn_4GpQ-r" : {
+      "id" : "NnDFP0EVqcjMExMhhwkq2$$ydb3S5idCm6Cjn_4GpQ-r",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "datasource1",
+        "slug" : "datasource1",
+        "x" : -700,
+        "y" : -360,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads sales data from a specified location for analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DgKNmOOdDqDVesJ2j79-z$$grpMAM389_9kydZQE7Ew1",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/datasource1"
+      }
+    },
+    "ECX6nsr4jp0FARqTBCra4$$MI6VAkfnuYwTdKeIO0Z5Q" : {
+      "id" : "ECX6nsr4jp0FARqTBCra4$$MI6VAkfnuYwTdKeIO0Z5Q",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target1",
+        "slug" : "target1",
+        "x" : -560,
+        "y" : -360,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rU8i_wWJLywdk--F2ml2v$$joUPgceZx8uI0umtj3q80",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target1"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.NnDFP0EVqcjMExMhhwkq2$$ydb3S5idCm6Cjn_4GpQ-r.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.ECX6nsr4jp0FARqTBCra4$$MI6VAkfnuYwTdKeIO0Z5Q.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }
